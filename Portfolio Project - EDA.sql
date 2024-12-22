@@ -1,6 +1,6 @@
--- EDA
+-- Exploratory Data Analysis (EDA)
 
--- Here we are jsut going to explore the data and find trends or patterns or anything interesting like outliers
+-- Here we are just going to explore the data and find trends or patterns or anything interesting like outliers
 
 -- normally when you start the EDA process you have some idea of what you're looking for
 
@@ -9,7 +9,6 @@
 SELECT * 
 FROM world_layoffs.layoffs_staging2;
 
--- EASIER QUERIES
 
 SELECT MAX(total_laid_off)
 FROM world_layoffs.layoffs_staging2;
@@ -23,6 +22,7 @@ FROM world_layoffs.layoffs_staging2;
 SELECT MAX(percentage_laid_off),  MIN(percentage_laid_off)
 FROM world_layoffs.layoffs_staging2
 WHERE  percentage_laid_off IS NOT NULL;
+
 
 -- Which companies had 1 which is basically 100 percent of they company laid off
 SELECT *
@@ -43,16 +43,6 @@ ORDER BY funds_raised_millions DESC;
 
 
 
-
-
-
-
-
-
-
-
-
--- SOMEWHAT TOUGHER AND MOSTLY USING GROUP BY--------------------------------------------------------------------------------------------------
 
 -- Companies with the biggest single Layoff
 
@@ -107,10 +97,7 @@ ORDER BY 2 DESC;
 
 
 
--- TOUGHER QUERIES------------------------------------------------------------------------------------------------------------------------------------
-
--- Earlier we looked at Companies with the most Layoffs. Now let's look at that per year. It's a little more difficult.
--- I want to look at 
+-- Earlier we looked at Companies with the most Layoffs. Now let's look at that per year.
 
 WITH Company_Year AS 
 (
